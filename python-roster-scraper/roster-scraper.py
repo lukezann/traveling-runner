@@ -1,9 +1,14 @@
 from bs4 import BeautifulSoup
+import geocoder
 import pandas as pd
 import requests
 
+api_key = input('api key: ')
+
 names = []
 hometowns = []
+latitudes = []
+longitudes = []
 
 # get request to roster page
 html = requests.get('https://ephsports.williams.edu/sports/mens-cross-country/roster').text
@@ -21,9 +26,16 @@ for ath in athletes:
     hometown = ath.find('span', class_='sidearm-roster-player-hometown').text.strip()
     hometowns.append(hometown)
 
+    # get lat and long for city
+    geo = geocoder.bing(hometown, key=api_key)
+    latitudes.append(geo.json['lat'])
+    longitudes.append(geo.json['lng'])
+
 # create pandas DataFrame and export to csv
 data = {'name' : names,
-        'hometown' : hometowns};
+        'hometown' : hometowns,
+        'latitute' : latitudes,
+        'longitude' : longitudes}
 
 df = pd.DataFrame(data)
 df.to_csv('hometowns.csv')
