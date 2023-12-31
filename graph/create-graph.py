@@ -5,7 +5,7 @@ import haversine as hs
 from haversine import Unit
 
 # read csv
-df = pd.read_csv('/Users/lukezanuck/Desktop/Projects/traveling-runner/hometowns.csv')
+df = pd.read_csv('/Users/lukezanuck/Desktop/Projects/traveling-runner/python-roster-scraper/hometowns.csv')
 df = df.drop(labels='Unnamed: 0', axis=1)
 
 # create empty adjacency matrix
