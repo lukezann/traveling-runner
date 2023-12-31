@@ -34,7 +34,7 @@ for ath in athletes:
 # create pandas DataFrame and export to csv
 data = {'name' : names,
         'hometown' : hometowns,
-        'latitute' : latitudes,
+        'latitude' : latitudes,
         'longitude' : longitudes}
 
 df = pd.DataFrame(data)
