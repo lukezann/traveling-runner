@@ -4,6 +4,7 @@ import pandas as pd
 import requests
 
 api_key = input('api key: ')
+end_pt = 'Williams College'
 
 names = []
 hometowns = []
@@ -31,6 +32,13 @@ for ath in athletes:
     latitudes.append(geo.json['lat'])
     longitudes.append(geo.json['lng'])
 
+# add end point (Williams College) to data
+names.append(end_pt)
+hometowns.append(end_pt)
+geo = geocoder.bing(end_pt, key=api_key)
+latitudes.append(geo.json['lat'])
+longitudes.append(geo.json['lng'])
+
 # create pandas DataFrame and export to csv
 data = {'name' : names,
         'hometown' : hometowns,
@@ -38,4 +46,5 @@ data = {'name' : names,
         'longitude' : longitudes}
 
 df = pd.DataFrame(data)
-df.to_csv('hometowns.csv')
+df.to_csv('/Users/lukezanuck/Desktop/Projects/traveling-runner/python-roster-scraper/hometowns.csv')
+print(df)
