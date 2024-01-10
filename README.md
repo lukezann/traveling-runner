@@ -9,7 +9,7 @@ I am developing a web app that will track my running progress as I accumulate mi
 I will attempt to visit every one of my teammates before finishing at Williams before the end of 2024.
 
 __Technologies Used__
-* Backend: Python (BeautifulSoup, Pandas, Networkx primarily) and MySQL (if necessary)
+* Backend: Python (BeautifulSoup, Pandas, Networkx primarily), Spring Boot, and MySQL (if necessary)
 * Frontend: JavaScript (React), HTML/CSS
 
 contact: lhz1@williams.edu
