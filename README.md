@@ -1,6 +1,7 @@
 # traveling-runner
 
 __Introduction__
+
 In 2023, I ran 3,068.9 mi.
 This is more than the distance between my hometown, Los Angeles, and my school, Williams College (2,888.2 mi, according to Google).
 To challenge myself both programming-wise (expand into frontend development) and athletically (run more miles),
