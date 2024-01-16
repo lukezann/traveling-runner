@@ -8,8 +8,4 @@ To challenge myself both programming-wise (expand into frontend development) and
 I am developing a web app that will track my running progress as I accumulate miles over the year.
 I will attempt to visit every one of my teammates before finishing at Williams before the end of 2024.
 
-__Technologies Used__
-* Backend: Python (BeautifulSoup, Pandas, Networkx primarily), Spring Boot, and PostgreSQL
-* Frontend: JavaScript (React), HTML/CSS
-
 contact: lhz1@williams.edu
